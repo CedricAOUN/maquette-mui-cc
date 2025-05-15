@@ -1,4 +1,4 @@
-import { Card, Stack, Typography } from '@mui/material';
+import { Card, CardContent, Stack, Typography } from '@mui/material';
 
 function StatCard({ icon, value, unit }) {
   return (
@@ -12,13 +12,14 @@ function StatCard({ icon, value, unit }) {
         boxShadow: 1,
         gap: 2,
         width: '100%',
+        height: '50px'
       }}
     >
       {icon}
-      <Stack>
+      <CardContent>
         <Typography variant='h6' fontWeight={'600'}>{value}</Typography>
         <Typography variant='subtitle2' color='#717171'>{unit}</Typography>
-      </Stack>
+      </CardContent>
     </Card>
   );
 }

@@ -20,7 +20,9 @@ function App() {
           <SideBar />
         </Box>
         <Header />
-        <Dashboard />
+        <main>
+          <Dashboard />
+        </main>
       </Box>
     </>
   );

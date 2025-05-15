@@ -4,29 +4,50 @@ import AddIcon from '@mui/icons-material/Add';
 import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { Stack } from '@mui/material';
+import { List, ListItemIcon } from '@mui/material';
+
+const icons = [
+  <HomeIcon />,
+  <GridViewRoundedIcon />,
+  <AddIcon />,
+  <PeopleIcon />,
+  <BarChartIcon />,
+  <SettingsIcon />,
+];
 
 function SideBar() {
   return (
-    <Stack
+    <List
       sx={{
         height: '100%',
-        pt: 12,
         boxShadow: 1,
+        paddingTop: 10,
+        gap: 2,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
         '& .MuiSvgIcon-root': {
           color: '#717171',
-        }
+          mx: 'auto',
+        },
       }}
-      alignItems={'center'}
-      spacing={2}
     >
-      <HomeIcon />
-      <GridViewRoundedIcon />
-      <AddIcon />
-      <PeopleIcon />
-      <BarChartIcon />
-      <SettingsIcon />
-    </Stack>
+      {icons.map((icon, index) => (
+        <ListItemIcon
+          key={index}
+          sx={{
+            borderRadius: 2,
+            '&:hover': {
+              backgroundColor: '#f0f0f0',
+              color: '#000',
+            },
+          }}
+        >
+          {icon}
+        </ListItemIcon>
+      ))}
+    </List>
   );
 }
 
