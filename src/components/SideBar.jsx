@@ -8,7 +8,15 @@ import { Stack } from '@mui/material';
 
 function SideBar() {
   return (
-    <Stack sx={{ height: '100%', pt: 12, borderRight: '1px solid black' }} alignItems={'center'} spacing={2}>
+    <Stack
+      sx={{
+        height: '100%',
+        pt: 12,
+        boxShadow: 1,
+      }}
+      alignItems={'center'}
+      spacing={2}
+    >
       <HomeIcon />
       <GridViewRoundedIcon />
       <AddIcon />
@@ -16,7 +24,7 @@ function SideBar() {
       <BarChartIcon />
       <SettingsIcon />
     </Stack>
-  )
+  );
 }
 
-export default SideBar
+export default SideBar;
