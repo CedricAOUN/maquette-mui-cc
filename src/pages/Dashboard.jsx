@@ -5,7 +5,7 @@ import LastOrders from '../components/LastOrders';
 
 function Dashboard() {
   return (
-    <Stack sx={{ m: 4, maxWidth: '100%' }} spacing={4}>
+    <Stack sx={{ m: 4, maxWidth: '100%', maxHeight: '100%' }} spacing={4}>
       <Stats />
       <Chart />
       <LastOrders />

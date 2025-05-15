@@ -4,7 +4,7 @@ import { LineChart } from '@mui/x-charts';
 function Chart() {
   return (
     <Box sx={{ maxWidth: '500px' }}>
-      <Typography variant='h5' fontWeight={'600'} sx={{ mb: 4 }}>
+      <Typography variant='h5' fontWeight={'600'} sx={{ mb: 2 }}>
         Graphique(avec @mui/x-charts)
       </Typography>
       <LineChart

@@ -1,4 +1,5 @@
 import { Avatar, Stack, Typography } from '@mui/material';
+import avatar from '../assets/avatar.png';
 
 function Header() {
   return (
@@ -12,10 +13,10 @@ function Header() {
         boxShadow: 1,
       }}
     >
-      <Typography variant='h5' color={'white'}>
+      <Typography variant='h5' color={'white'} fontWeight={'600'}>
         Tableau de bord
       </Typography>
-      <Avatar alt='Avatar image' src='./assets/avatar.png' />
+      <Avatar alt='Avatar image' src={avatar} />
     </Stack>
   );
 }

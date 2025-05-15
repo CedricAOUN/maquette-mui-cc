@@ -13,6 +13,9 @@ function SideBar() {
         height: '100%',
         pt: 12,
         boxShadow: 1,
+        '& .MuiSvgIcon-root': {
+          color: '#717171',
+        }
       }}
       alignItems={'center'}
       spacing={2}

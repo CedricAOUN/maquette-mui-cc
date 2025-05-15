@@ -17,7 +17,7 @@ function StatCard({ icon, value, unit }) {
       {icon}
       <Stack>
         <Typography variant='h6'>{value}</Typography>
-        <Typography variant='subtitle2'>{unit}</Typography>
+        <Typography variant='subtitle2' color='#717171'>{unit}</Typography>
       </Stack>
     </Card>
   );
