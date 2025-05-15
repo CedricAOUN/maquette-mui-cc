@@ -20,12 +20,8 @@ function SideBar() {
     <Drawer
       variant="permanent"
       sx={{
-        width: 80,
-        flexShrink: 0,
         '& .MuiDrawer-paper': {
           width: 80,
-          boxSizing: 'border-box',
-          backgroundColor: 'white',
         },
       }}
     >
