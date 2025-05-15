@@ -1,10 +1,10 @@
+import { Drawer, List, ListItemIcon } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
 import AddIcon from '@mui/icons-material/Add';
 import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { List, ListItemIcon } from '@mui/material';
 
 const icons = [
   <HomeIcon />,
@@ -17,37 +17,50 @@ const icons = [
 
 function SideBar() {
   return (
-    <List
+    <Drawer
+      variant="permanent"
       sx={{
-        height: '100%',
-        boxShadow: 1,
-        paddingTop: 10,
-        gap: 2,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        '& .MuiSvgIcon-root': {
-          color: '#717171',
-          mx: 'auto',
+        width: 80,
+        flexShrink: 0,
+        '& .MuiDrawer-paper': {
+          width: 80,
+          boxSizing: 'border-box',
+          backgroundColor: 'white',
         },
       }}
     >
-      {icons.map((icon, index) => (
-        <ListItemIcon
-          key={index}
-          sx={{
-            borderRadius: 2,
-            '&:hover': {
-              backgroundColor: '#f0f0f0',
-              color: '#000',
-            },
-          }}
-        >
-          {icon}
-        </ListItemIcon>
-      ))}
-    </List>
+      <List
+        sx={{
+          height: '100%',
+          boxShadow: 1,
+          paddingTop: 10,
+          gap: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+          alignItems: 'center',
+          '& .MuiSvgIcon-root': {
+            color: '#717171',
+            mx: 'auto',
+          },
+        }}
+      >
+        {icons.map((icon, index) => (
+          <ListItemIcon
+            key={index}
+            sx={{
+              borderRadius: 2,
+              '&:hover': {
+                backgroundColor: '#f0f0f0',
+                color: '#000',
+              },
+            }}
+          >
+            {icon}
+          </ListItemIcon>
+        ))}
+      </List>
+    </Drawer>
   );
 }
 
